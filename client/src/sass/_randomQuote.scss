@@ -1,0 +1,21 @@
+.random-quote-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+
+  .random-quote-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-container-rq {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

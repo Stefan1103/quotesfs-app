@@ -1,0 +1,33 @@
+.main {
+  margin: auto 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-table-title {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: darkslateblue;
+  }
+
+  .main-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    .grid-col-1 {
+      border: solid 1px black;
+    }
+    .grid-col-2 {
+      border: solid 1px black;
+    }
+    .grid-col-3 {
+      border: 1px solid black;
+    }
+    .grid-col-4 {
+      border: 1px solid black;
+    }
+  }
+}

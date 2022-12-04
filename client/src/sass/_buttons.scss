@@ -1,0 +1,29 @@
+%butn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0.15em;
+  padding: 0.2em 0.6em;
+  text-align: center;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+  }
+}
+
+.btn-darkblue {
+  @extend %butn;
+  color: white;
+  background-color: darkslateblue;
+  border: none;
+  font-weight: 500;
+  transition: transform 200ms ease;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(112, 103, 165);
+    transform: scale(1.08);
+  }
+}
