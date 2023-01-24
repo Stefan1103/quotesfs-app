@@ -34,12 +34,12 @@ const QuoteListMain: FC = () => {
             <div className="grid-col-2 grid-flex">{content}</div>
             <div className="grid-col-3 grid-flex">{author}</div>
             <div className="grid-col-4 grid-flex">
-              {listAges === undefined ? 0 : listAges[count].age}
-              {listAges === undefined
-                ? 0
-                : listAges[count].age >= 50
-                ? "🧓"
-                : "👶"}
+              {listAges && listAges.length > 0 ? listAges[count].age : 0}
+              {listAges && listAges.length > 0
+                ? listAges[count].age >= 50
+                  ? "🧓"
+                  : "👶"
+                : 0}
             </div>
           </div>
         );

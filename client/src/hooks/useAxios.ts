@@ -38,13 +38,16 @@ export const useAxios = () => {
       setDataQuotes(resultList);
 
       setIsLoading(true);
+      let pomArr = [];
       for (let i = 0; i < resultList.results.length; i++) {
         let urlA = `https://api.agify.io/?name=${
           resultList.results[i].author.split(" ", 1)[0]
         }`;
-        const response = await axios.get(urlA);
-        const result: Age = await response.data;
-        newArrAges.push(result);
+        pomArr.push(axios.get(urlA));
+      }
+      const p = await Promise.all(pomArr);
+      for (let i = 0; i < p.length; i++) {
+        newArrAges.push(p[i].data);
       }
       setListAges(newArrAges);
       setIsLoading(false);
