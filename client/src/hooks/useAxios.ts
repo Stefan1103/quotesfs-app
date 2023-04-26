@@ -10,8 +10,8 @@ export const useAxios = () => {
     statusText: "",
   });
 
-  const urlRandom = "http://localhost:5000/random";
-  const url = "http://localhost:5000/quotes";
+  const urlRandom = "https://quotesfs-app.onrender.com/random";
+  const url = "https://quotesfs-app.onrender.com/quotes";
   const [dataQuotes, setDataQuotes] = useState<QuotesList>();
   const [dataRandomQuote, setDataRandomQuote] = useState<RandomQuote>();
 
